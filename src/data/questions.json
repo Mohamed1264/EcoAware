@@ -1,0 +1,69 @@
+{
+    "forest": [
+      {
+        "question": "What is the largest forest in Morocco?",
+        "choices": [
+          "Ifrane National Park",
+          "Tazekka National Park",
+          "Souss-Massa",
+          "Khenifra Forest"
+        ],
+        "correctAnswer": "Ifrane National Park"
+      },
+      {
+        "question": "What is the main cause of deforestation in Morocco?",
+        "choices": [
+          "Agriculture",
+          "Urbanization",
+          "Mining",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above"
+      }
+    ],
+    "water": [
+      {
+        "question": "Which river is the longest in Morocco?",
+        "choices": [
+          "Moulouya",
+          "Oum Er-Rbia",
+          "Sebou",
+          "Draa"
+        ],
+        "correctAnswer": "Oum Er-Rbia"
+      },
+      {
+        "question": "What is the largest dam in Morocco?",
+        "choices": [
+          "Al Wahda Dam",
+          "Bin el Ouidane Dam",
+          "El Mansour Eddahbi Dam",
+          "Sidi Mohammed Ben Abdallah Dam"
+        ],
+        "correctAnswer": "Al Wahda Dam"
+      }
+    ],
+    "wetlands": [
+      {
+        "question": "What is the primary ecological function of wetlands?",
+        "choices": [
+          "Flood control",
+          "Water purification",
+          "Carbon storage",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above"
+      },
+      {
+        "question": "Which Moroccan wetland is recognized as a Ramsar site?",
+        "choices": [
+          "Merja Zerga",
+          "Souss-Massa National Park",
+          "Tichka Wetlands",
+          "Imsouane Wetlands"
+        ],
+        "correctAnswer": "Merja Zerga"
+      }
+    ]
+  }
+  

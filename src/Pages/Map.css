@@ -1,0 +1,130 @@
+/* Centers the map container horizontally */
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto; /* This does the horizontal centering */
+    display: block; /* Changed from flex to block since we're centering the SVG directly */
+}
+
+/* Centers the SVG map itself */
+svg {
+    width: 50%; /* Your existing 50% width */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* This centers the SVG in its container */
+    /* Removed justify-content (only works in flex containers) */
+}
+
+/* Your existing dimmer style - unchanged */
+.dimmer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Your existing highlighted style - unchanged */
+.highlighted {
+    border: solid 2px white;
+    fill: orange !important;
+    transition: fill 0.2s;
+}
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-container {
+    background: white;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .modal-header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .modal-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-top: 1rem;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Section Styles */
+  .description-section {
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .water-section, .forest-section {
+    padding: 1.5rem;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .water-section {
+    border-top: 4px solid #3a86ff;
+  }
+  
+  .forest-section {
+    border-top: 4px solid #2a9d8f;
+  }
+  
+  /* SVG Path Styles */
+  path[data-city] {
+    transition: fill 0.2s ease;
+  }
+  
+  path[data-city]:hover {
+    fill: #4F46E5;
+    stroke: #3730A3;
+    stroke-width: 2px;
+  }
