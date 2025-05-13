@@ -139,19 +139,19 @@ export default function NavBar({ lang, changeLanguage, supportedLanguages }) {
         '--nav-hover-text': currentTheme.activeText.replace('text-', '')
       }}
     >
-      <div className="mx-auto px-4 h-16 sm:px-6 lg:px-8">
+      <div className="mx-auto px-2 sm:px-4 h-14 sm:h-16 lg:px-8">
         {/* Main Navigation Container */}
         <div className="flex items-center justify-between">
           
           {/* Logo and Mobile Menu Button */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center gap-2">
+            <Link to="/" className="flex items-center gap-1 sm:gap-2">
               <img 
-                className="size-10 sm:size-12" 
+                className="size-8 sm:size-10 md:size-12" 
                 src={currentTheme.logo} 
                 alt="EcoAware Logo" 
               />
-              <span className={`text-xl font-bold ${currentTheme.textColor}`}>
+              <span className={`text-lg sm:text-xl font-bold ${currentTheme.textColor}`}>
                 EcoAware
               </span>
             </Link>
@@ -163,7 +163,7 @@ export default function NavBar({ lang, changeLanguage, supportedLanguages }) {
               <Link
                 key={navLink.pageName}
                 to={navLink.link}
-                className={`flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium
+                className={`flex items-center gap-1 rounded-md px-2 sm:px-3 py-2 text-sm font-medium
                   ${isActive(navLink.link) 
                     ? `${currentTheme.activeBg} ${currentTheme.activeText}` 
                     : `${currentTheme.textColor} hover:bg-[var(--nav-hover-bg)] hover:text-[var(--nav-hover-text)]`
@@ -176,7 +176,7 @@ export default function NavBar({ lang, changeLanguage, supportedLanguages }) {
 
             <Link
               to={`/funny`}
-              className={`flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium
+              className={`flex items-center gap-1 rounded-md px-2 sm:px-3 py-2 text-sm font-medium
                 ${isActive(`/funny`)
                   ? `${currentTheme.activeBg} ${currentTheme.activeText}`
                   : `${currentTheme.textColor} hover:bg-[var(--nav-hover-bg)] hover:text-[var(--nav-hover-text)]`
@@ -192,7 +192,7 @@ export default function NavBar({ lang, changeLanguage, supportedLanguages }) {
             <div className="relative">
               <button
                 onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
-                className={`flex items-center gap-1 rounded-md px-3 py-2 text-sm
+                className={`flex items-center gap-1 rounded-md px-2 sm:px-3 py-2 text-sm
                   ${currentTheme.textColor} hover:bg-[var(--nav-hover-bg)] hover:text-[var(--nav-hover-text)]`}
               >
                 <Globe className="size-4" />
@@ -225,7 +225,7 @@ export default function NavBar({ lang, changeLanguage, supportedLanguages }) {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`p-2 rounded-md ${currentTheme.textColor} hover:bg-[var(--nav-hover-bg)] hover:text-[var(--nav-hover-text)]`}
+              className={`p-1.5 sm:p-2 rounded-md ${currentTheme.textColor} hover:bg-[var(--nav-hover-bg)] hover:text-[var(--nav-hover-text)]`}
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? (
@@ -253,7 +253,7 @@ export default function NavBar({ lang, changeLanguage, supportedLanguages }) {
                 key={navLink.pageName}
                 to={navLink.link}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium
+                className={`flex items-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium
                   ${isActive(navLink.link)
                     ? `${currentTheme.activeBg} ${currentTheme.activeText}`
                     : `${currentTheme.textColor} hover:bg-[var(--nav-hover-bg)] hover:text-[var(--nav-hover-text)]`
@@ -267,7 +267,7 @@ export default function NavBar({ lang, changeLanguage, supportedLanguages }) {
             <Link
               to={`/funny`}
               onClick={() => setIsMobileMenuOpen(false)}
-              className={`flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium
+              className={`flex items-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium
                 ${isActive(`/funny`)
                   ? `${currentTheme.activeBg} ${currentTheme.activeText}`
                   : `${currentTheme.textColor} hover:bg-[var(--nav-hover-bg)] hover:text-[var(--nav-hover-text)]`
@@ -288,7 +288,7 @@ export default function NavBar({ lang, changeLanguage, supportedLanguages }) {
                 <button
                   key={code}
                   onClick={() => handleLanguageChange(code)}
-                  className={`flex justify-center items-center py-2 text-sm font-medium rounded-md
+                  className={`flex justify-center items-center py-2.5 text-sm font-medium rounded-md
                     ${lang === code
                       ? `${currentTheme.activeBg} ${currentTheme.activeText}`
                       : `${currentTheme.textColor} hover:bg-[var(--nav-hover-bg)] hover:text-[var(--nav-hover-text)]`
