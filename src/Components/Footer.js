@@ -1,7 +1,11 @@
-import logo from '../logo.png'
-import logoGray from '../LogoGray.png'
-import logoAmber from '../logoAmber (1).png'
-import logoBlue from '../logoBlue.png'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import logo from '../logo.png';
+import logoGray from '../LogoGray.png';
+import logoAmber from '../logoAmber (1).png';
+import logoBlue from '../logoBlue.png';
 import { useLocation } from 'react-router-dom'
 import { footerTexts } from '../data/footerTranslations'
 import { useContext } from 'react'

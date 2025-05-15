@@ -81,14 +81,6 @@ const themeConfig = {
     activeBg: 'bg-indigo-700',
     activeText: 'text-indigo-100',
     border: 'border-indigo-700'
-  },
-  '/funny': {
-    logo: logoBlue,
-    navBg: 'bg-purple-100',
-    textColor: 'text-purple-700',
-    activeBg: 'bg-purple-700',
-    activeText: 'text-purple-100',
-    border: 'border-purple-700'
   }
 };
 
