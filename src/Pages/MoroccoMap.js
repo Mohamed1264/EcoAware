@@ -182,7 +182,7 @@ const MoroccoMap = () => {
             <img 
               src={regionInfo.imageUrl} 
               alt={regionInfo.name} 
-              className="w-full h-40 object-cover mb-3 rounded"
+              className="w-full  object-cover mb-3 rounded"
               onError={(e) => {
                 e.target.style.display = 'none';
               }}

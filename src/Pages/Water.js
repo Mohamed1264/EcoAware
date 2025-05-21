@@ -230,21 +230,7 @@ export default function Water() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-700 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">{t.cta.title}</h2>
-          <p className="text-xl mb-8">{t.cta.subtitle}</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#" className="bg-white text-blue-800 px-8 py-3 rounded-lg font-bold hover:bg-blue-100 transition-colors duration-200">
-              {t.cta.donate}
-            </a>
-            <a href="#" className="bg-transparent border-2 border-white px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors duration-200">
-              {t.cta.learn}
-            </a>
-          </div>
-        </div>
-      </section>
+      
 
       {/* AI Solutions Section - Matching Water Page Design */}
 <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-100">

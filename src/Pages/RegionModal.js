@@ -47,62 +47,71 @@ const RegionModal = ({ region, language, translate, onClose }) => {
             </button>
           </div>
 
-          <div className="relative mb-3 sm:mb-4 rounded-lg overflow-hidden">
-            {/* Blurred placeholder that shows while loading */}
-            {!imageLoaded && (
-              <img 
-                src={region.imageUrl}
-                alt=""
-                className="absolute inset-0 w-full h-48 sm:h-64 object-cover blur-sm scale-105"
-                loading="lazy"
-              />
-            )}
-            
-            {/* High quality image */}
-            <img
-              src={region.imageUrl}
-              alt={region.name}
-              className={`w-full h-48 sm:h-64 object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
-              onError={handleImageError}
-              onLoad={handleImageLoad}
-              loading="lazy"
-            />
-            
-            {/* Loading indicator */}
-            {!imageLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="animate-spin rounded-full h-8 w-8 sm:h-12 sm:w-12 border-t-2 border-b-2 border-blue-500"></div>
-              </div>
-            )}
-          </div>
+          <div className="flex flex-col  sm:flex-row gap-4">
+  {/* Image Container */}
+  <div className="relative rounded-lg overflow-hidden flex-shrink-0 w-full sm:w-[35%]">
+    {/* Blurred Placeholder */}
+    {!imageLoaded && (
+      <img
+        src={region.imageUrl}
+        alt={`${region.name} blurred placeholder`}
+        className="absolute inset-0 w-full h-full object-cover blur-sm scale-105"
+        loading="lazy"
+      />
+    )}
 
-          {/* Fallback image */}
-          {imageError && (
-            <img 
-              src="/images/regions/default-region.jpg"
-              alt={region.name}
-              className="w-full h-48 sm:h-64 object-cover rounded-lg mb-3 sm:mb-4"
-            />
-          )}
+    {/* High-Quality Image */}
+    <img
+      src={region.imageUrl}
+      alt={region.name}
+      className={`w-full h-48 sm:h-64 object-cover transition-opacity duration-300 rounded-lg ${
+        imageLoaded ? 'opacity-100' : 'opacity-0'
+      }`}
+      onLoad={handleImageLoad}
+      onError={handleImageError}
+      loading="lazy"
+    />
 
-          <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6">
+    {/* Loading Spinner */}
+    {!imageLoaded && (
+      <div className="absolute inset-0 flex items-center justify-center bg-white/40">
+        <div className="animate-spin rounded-full h-8 w-8 sm:h-10 sm:w-10 border-2 border-blue-500 border-t-transparent"></div>
+      </div>
+    )}
+  </div>
+
+  {/* Fallback Image (Only if error occurs) */}
+  {imageError && (
+    <img
+      src="/images/regions/default-region.jpg"
+      alt={`${region.name} fallback image`}
+      className="w-full sm:w-[40%] h-48 sm:h-64 object-cover rounded-lg"
+    />
+  )}
+
+  {/* Region Information */}
+  <div className="w-full bg-blue-50 p-4 rounded-lg">
+    <h3 className="text-lg sm:text-xl font-semibold text-blue-800 mb-3">
+      {translate('waterResources')}
+    </h3>
+    <ul className="space-y-2 text-sm sm:text-base text-gray-800">
+      <li>
+        <span className="font-medium">{translate('rivers')}:</span>{' '}
+        {region[language].water.rivers} ({region[language].water.majorRivers?.join(', ')})
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+          <div className="space-y-3 sm:space-y-4 mt-5">
+            
+            
+            <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6">
             {region[language].description}
           </p>
-
-          <div className="space-y-3 sm:space-y-4">
-            {/* Water Resources Section */}
-            <div className="bg-blue-50 p-3 sm:p-4 rounded-lg">
-              <h3 className="text-lg sm:text-xl font-semibold text-blue-800 mb-2 sm:mb-3">
-                {translate('waterResources')}
-              </h3>
-              <ul className="space-y-1 sm:space-y-2 text-sm sm:text-base">
-                <li>
-                  <span className="font-medium">{translate('rivers')}: </span>
-                  {region[language].water.rivers} ({region[language].water.majorRivers?.join(', ')})
-                </li>
-                {/* Other water resources data... */}
-              </ul>
-            </div>
+          
 
             {/* Forests Section */}
             <div className="bg-green-50 p-3 sm:p-4 rounded-lg">

@@ -477,7 +477,7 @@ export const regionsData = {
       projects: ["مبادرة الحزام الأخضر", "ترميم الأراضي الرطبة"]
     }
   },
-  imageUrl: "/images/regions/casablanca.jpg"
+  imageUrl: "/images/regions/casablanca.webp"
 },
    
   "Marrakech-Safi": {
@@ -642,7 +642,7 @@ export const regionsData = {
         projects: ["الحفاظ على الواحات", "برنامج حصاد الضباب"]
       }
     },
-    imageUrl: "/images/regions/draa-tafilalet.jpg"
+    imageUrl: "/images/regions/ouarzazate.jpg"
   },
 
   "Souss-Massa": {
@@ -807,7 +807,7 @@ export const regionsData = {
         projects: ["الحفاظ على الواحات", "حصاد الضباب", "إجراءات مكافحة التصحر"]
       }
     },
-    imageUrl: "/images/regions/guelmim-oued-noun.jpg"
+    imageUrl: "/images/regions/guelmim-oued-noun.jpeg"
   },
 
   "Laâyoune-Sakia El Hamra": {
@@ -891,7 +891,7 @@ export const regionsData = {
         projects: ["إعادة تأهيل الواحات", "الحماية الساحلية", "مبادرات تخضير الصحراء"]
       }
     },
-    imageUrl: "/images/regions/laayoune-sakia.jpg"
+    imageUrl: "/images/regions/laayoune.webp"
   },
 
   "Dakhla-Oued Ed-Dahab": {
@@ -972,7 +972,7 @@ export const regionsData = {
         projects: ["ترميم أشجار القرم", "الابتكار في الزراعة الصحراوية", "الطاقة المتجددة للمياه"]
       }
     },
-    imageUrl: "/images/regions/dakhla-oued.jpg"
+    imageUrl: "/images/regions/dakhla.avif"
   }
   };
   
